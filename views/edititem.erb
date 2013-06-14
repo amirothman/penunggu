@@ -1,0 +1,8 @@
+<div class="container">
+<form action=<%= "/item/#{@item.id}" %> method="post" id="edit">
+	<input type="hidden" name="_method" value="put">
+    ID:<input type="text" name="name" value=<%= @item.name %>><br>
+    Text:<input type="text" name="text" value=<%= @item.text %>><br>
+    Number:<input type="text" name="text" value=<%= @item.number %>><br>
+    <input class="btn btn-inverse" type="submit" value="Edit">
+</form></div>

@@ -1,0 +1,38 @@
+<div class="container">
+
+<h1>Log</h1>
+<% if @log %>
+<% @log.each do |l| %>
+<p><%= l %></p>
+<% end %>
+<% end %>
+
+<h1>List</h1>
+<% if @items %>
+<% @items.each do |e| %>
+<p>
+    <a href=<%= "/item/#{e.id}" %>><i class="icon icon-pencil"></i></a>
+    <a href=<%="/item/#{e.id}/up" %> ><i class="icon-large icon-upload"></i></a>
+    <a href=<%="/item/#{e.id}/down" %> ><i class="icon-large icon-download"></i></a>
+
+    <%= e.priority %> <%= e.name %>
+
+
+    <a href=<%="/item/#{e.id}/done" %> ><i class="icon-large icon-ok-sign"></i></a>
+    <%if e.reminded %>
+    <i class="icon icon-bell"></i>
+    <%end %>
+</a></p>
+
+<% end %>
+<% end %>
+
+<h1>Add New Item</h1>
+<form action="/item" method="post">
+    Name:<input type="text" name="name"><br>
+    Text:<input type="text" name="text"><br>
+    Number:<input type="text" name="number"><br>
+
+    <input class="btn btn-inverse" type="submit" value="Add">
+</form>
+</div>
