@@ -15,7 +15,7 @@
     <a href=<%="/item/#{e.id}/up" %> ><i class="icon-large icon-upload"></i></a>
     <a href=<%="/item/#{e.id}/down" %> ><i class="icon-large icon-download"></i></a>
 
-    <%= e.priority %> <%= e.name %>
+    <%= e.priority %> <a href=<%= "/item/#{e.id}/show"%>><%= e.name %></a>
 
 
     <a href=<%="/item/#{e.id}/done" %> ><i class="icon-large icon-ok-sign"></i></a>
