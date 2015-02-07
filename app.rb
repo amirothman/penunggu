@@ -81,8 +81,8 @@ after '/item/:id/done' do
   #if item[2].reminder
   if item[2]
     
-    #@account_sid = 'AC7914eff096444c577915cbff191a094d'
-    #@auth_token = 'e746e8040fa3bee45c936a341bca7c7e'
+    #@account_sid = 
+    #@auth_token = 
     #send SMS!!!
     #@client = Twilio::REST::Client.new(@account_sid, @auth_token)
 
